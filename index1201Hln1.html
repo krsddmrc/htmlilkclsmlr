@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1201Hln</title>
+    <style>
+        body{background-color: blanchedalmond;
+    
+        }
+        #baslik{
+            text-align: center;
+        }
+        #baslik p{
+            text-decoration-line: underline;
+        }
+        #kisisel{
+            background-color: rgb(240, 255, 255);
+            max-width: 300px;
+            border:2px solid blue;     
+            margin:auto;
+            padding: 5px;px;
+        }
+        h4{text-align: center;
+        }
+
+        #ders{
+           
+            background-color:#f0ffff ;
+            max-width: 300px;
+            border:2px solid blue;     
+            margin:auto;
+            padding: 5px;
+
+        }
+        #iletisim {
+            border: 2px;
+            border-color:blue;
+            background-color: bisque;
+            text-align: center;
+
+        }
+        #dersterc{
+            text-align: center;
+        }
+
+    </style>
+    </head>
+<body>
+    <form action="report.html">
+        <div id="baslik">
+            <h1>Başvuru Formu</h1>
+            <p>Kurs Almak İsteyen Öğrenciler İçindir</p>
+        </div>
+        <hr>
+        <div id="kisisel">
+            <h4>Kişisel Bilgiler:</h4>                   
+            <label for="adı" > Adı:</label>
+            <input type="text" name="username" id="adı" placeholder="Adınızı giriniz..." >
+            <br><br>
+            <label for="soyadı">Soyadı:</label>
+            <input type="text" name="surname" id="soyadı" placeholder="Soyadınızı giriniz..." >
+            <br><br>
+            <label for="yas">Yaş:</label>
+            <input type="number" name="age" id="yas" min=12 max=30>
+            <input type="radio" name="gender" id="genM" value="male">
+            <label for="genM">Erkek</label>            
+            <input type="radio" name="gender" id="genF" value="female">
+            <label for="genF">Bayan</label>            
+        </div>
+        <br>
+        <div id="ders">      
+            <h4>Okul ve Ders Bilgileri</h4>
+            <label for="okulu">Okulu:</label>
+            <input type="text" name="school" id="okulu" placeholder="Devam ettiğiniz okul..." >
+            <br><br>
+            <label for="sınıfı">Sınıfı  :</label>
+            <input type="text" name="grade" id="sınıfı" placeholder="Kaçıncı sınıf olduğunu belirtiniz..." >
+            <h4>Adres Bilgileri</h4>
+            <label for="adresi">Adres:</label>
+            <input type="text" name="adress" id="adresi" placeholder="İkamet adresiniz..." >
+            <br><br>
+            <label for="">Çevre ilçeler için seçiniz:</label>
+                <select name="notCenter" id="uzak">
+                    <option value="Ailc"selected>A İlçesi</option>
+                    <option value="Bilc" >B İlçesi</option>
+                    <option value="Cilc">C İlçesi</option>
+                    <option value="Dilc">D ilçesi</option>
+                </select>
+        </div>
+        <hr>
+        <div>
+            
+        </div>
+        <div id="dersterc">
+            <h4>Kurs Almak İstediğiniz Dresler:</h4>
+            <input type="checkbox" name="lesson" id="mat" value="mat"checked>
+            <label for="mat">Matematik</label>
+            <input type="checkbox" name="lesson" id="eng" value="eng">
+            <label for="eng">İngilizce</label>
+            <input type="checkbox" name="lesson" id="pys" value="pys">
+            <label for="pys">Fizik</label>
+            <input type="checkbox" name="lesson" id="che" value="che">
+            <label for="che">Kimya</label> 
+            <input type="checkbox" name="lesson" id="bio" value="bio">
+            <label for="bio">Biyoloji</label>
+        <p>Günlük kurs süresi en az 2 en çok 8 saattir. Günlük alabileceğiniz ders yoğunluğunu belirtiniz.</p>
+        <label for="points">Ders Süresi (+2):</label>
+        <input type="range" id="points" name="points" min="2" max="8" step="2">
+        </div>
+        <hr>
+        <div id="iletisim">
+            <h4>İletişim Bilgileri</h4>
+            <br>
+            <label for="tel">Telefon No:</label>
+            <input type="tel" name="phone" id="tel"
+            pattern="[0-9]{3}-[0-9]{7}"
+            placeholder="xxx-xxxxxxx">
+            <label for="e-ma">E-mail :</label>
+            <input type="email" name id="e-ma"           
+            placeholder="****@*****.com">
+        </div>  <br><br>
+        <div style="margin:auto; border: 2px solid red ; width: 50%; text-align: center; border-radius: 50px;" >
+        <input type="reset">
+        <input type="submit" >  
+        </div>
+    </form>
+</html>
